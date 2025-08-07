@@ -1,0 +1,33 @@
+User-agent: Yandex
+Allow: /
+Disallow: /assets/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /search/
+Disallow: /*?*              # Блокировка URL с параметрами
+Clean-param: ref /news.html # Игнорировать параметр `ref` в указанных URL
+
+# Указываем главное зеркало (если есть HTTPS)
+Host: https://ваш-сайт.ru
+
+# Указываем Sitemap (обязательно для Yandex)
+Sitemap: https://ваш-сайт.ru/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/
+Disallow: /admin/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /*?*
+Disallow: /search/
+
+Sitemap: https://nasledie-vechnyh.ru/sitemap.xml
+
+# Указываем главное зеркало (если есть HTTPS)
+Host: https://ваш-сайт.ru  
+
+# Указываем Sitemap (обязательно для Google)
+Sitemap: https://ваш-сайт.ru/sitemap.xml  
+Sitemap: https://ваш-сайт.ru/sitemap-images.xml  # Если есть карта изображений
