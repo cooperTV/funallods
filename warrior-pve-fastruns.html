@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Воин | Гилдия Наследие Вечных</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/feature.css">
+    <link rel="stylesheet" href="assets/css/core.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/running-line.css">
+
+    <!-- Meta -->
+    <meta name="description" content="Фан-сайт гильдии Наследие Вечные в Allods Online">
+</head>
+
+<body class="class-page">
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo/logo.webp" alt="Allods Online"></a>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Главная</a>
+            <a href="news.html">Новости</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Предметы <span class="arrow">▼</span></a>
+                <div class="dropdown-menu">
+                    <a href="dragon-form.html">Драконий Облик</a>
+                    <a href="bank-items.html">Предметы в банке</a>
+                </div>
+            </div>
+            <a href="guild.html">Гильдия</a>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="main-content">
+        <!-- Центральный блок с табами -->
+        <div class="class-central-block">
+            <!-- Навигационные табы -->
+            <div class="class-tabs">
+                <ul class="tab-nav">
+                    <li class="active"><a href="warrior-pve-fastruns.html">Обзор</a></li>
+                    <li><a href="warrior-active.html">Активные умения</a></li>
+                    <li><a href="warrior-passive.html">Пассивные умения</a></li>
+                    <li><a href="warrior-progression.html">Билд</a></li>
+                </ul>
+            </div>
+
+            <!-- Контент таба -->
+            <div class="tab-content active" id="overview">
+                <div class="content-wrapper">
+                    <!-- Левая колонка - описание -->
+                    <div class="left-column">
+                        <div class="gameplay-section">
+                            <div class="gameplay-text">
+                            <h2>Сборка Война PvE Быстрые Прохождения Островов, OBS+Хранители</h2>
+                            <p>Добро пожаловать на страницу сборки «Воин ПВЕ Фаст Раны», здесь будет описано руководство по сборке Война при максимальной мобильности без умений на защиту.</p>
+                            <p>На этом примере будет описана сборка и какая будет расскладка на класс, это не полноценный учебник - "как играть".</p>
+                            <p>Мини - гайд подходит для максимально быстрого прохождения Астральных Островов и возможно для других активностей, из того какой у вас опыт.</p>
+                            <h3></h3>
+                            </div>
+                        </div>
+
+                        <div class="build-description">
+                            <h3><p>Сборка сочетает в себе высокий урон и отличную мобильность, что делает её идеальной для фарма и быстрого прохождения астральных островов.</p></h3>
+                            <h2>Основные преимущества:</h2>
+                            <ul>
+                                <p>Высокий урон по соло-цели</p>
+                                <p>Отличная мобильность за счёт прыжков и рывков</p>
+                                <p>Выживаемость благодаря кровожадности (за счёт урона)</p>
+                                <p>Простота в освоении</p>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Правая колонка - характеристики -->
+                    <div class="right-column">
+                        <div class="build-stats">
+                            <h3>Характеристики билда</h3>
+                            <ul>
+                                <li><span>Роль:</span> <span class="stat-value role">DD (Damage Dealer)</span></li>
+                                <li><span>Сложность:</span> <span class="rating-stars" style="--rating: 2;"></span></li>
+                                <li><span>Выживаемость:</span> <span class="rating-stars" style="--rating: 2;"></span></li>
+                                <li><span>Урон:</span> <span class="rating-stars" style="--rating: 5;"></span></li>
+                                <li><span>Мобильность:</span> <span class="rating-stars" style="--rating: 5;"></span></li>
+                                <li><span>Рейтинг PvE:</span> <span class="tier-value tier-t2">Т2</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="stats-table">
+                            <h3>Атакующие</h3>
+                            <div class="stat-rows-container">
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/mastery.png')"></span>
+                                        Мастерство
+                                    </span>
+                                    <span class="stat-value">300-350</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/resolve.png')"></span>
+                                        Решимость
+                                    </span>
+                                    <span class="stat-value">1200-1300</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/ruthlessness.png')"></span>
+                                        Беспощадность
+                                    </span>
+                                    <span class="stat-value">400-450</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/luck.png')"></span>
+                                        Удача
+                                    </span>
+                                    <span class="stat-value">100+/-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/domination.png')"></span>
+                                        Господство
+                                    </span>
+                                    <span class="stat-value">400-500</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stats-table">
+                            <h3>Защитные</h3>
+                            <div class="stat-rows-container">
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/bloodthirst.png')"></span>
+                                        Кровожадность
+                                    </span>
+                                    <span class="stat-value">800-1000+</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/vitality.png')"></span>
+                                        Живучесть
+                                    </span>
+                                    <span class="stat-value optional">По желанию</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/caution.png')"></span>
+                                        Осторожность
+                                    </span>
+                                    <span class="stat-value">Не нужна</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/instinct.png')"></span>
+                                        Инстинкт
+                                    </span>
+                                    <span class="stat-value">Не нужен</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <span class="stat-icon" style="background-image: url('assets/images/icons/stats/will.png')"></span>
+                                        Воля
+                                    </span>
+                                    <span class="stat-value">Не нужна</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Allods Online Fan Site | Гильдия "Наследие Вечных" | Сервер "Наследие Богов"</p>
+            <div class="credits">
+                <p>Особая благодарность:</p>
+                <ul>
+                    <li>ВЕРКИРИЙ</li>
+                    <li>Войслава</li>
+                    <li>ДияМира</li>
+                    <li>ЛозиФол</li>
+                    <li>Фелхаммер</li>
+                </ul>
+            </div>
+            <p>Сайт создан: СкиллОхотникА</p>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/head/running-line.js"></script>
+</body>
+</html>
