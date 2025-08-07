@@ -1,0 +1,298 @@
+/* Основные стили страницы */
+@import url('colors.css');
+
+body {
+  font-family: 'Allods West', Arial, sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background: url('../images/background/body-bg-1024px.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+@font-face {
+  font-family: 'Allods West';
+  src: url('../fonts/allods_west.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Анимации */
+@keyframes glow {
+  0% { filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8)); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Шапка */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px;
+  background: var(--bg-dark);
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+  transition: var(--transition);
+  filter: brightness(1);
+}
+
+.logo:hover img {
+  animation: glow 1.5s infinite alternate;
+  filter: brightness(1.2);
+}
+
+/* Навигация */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-right: 70px;
+}
+
+.main-nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  padding: 5px 0;
+  position: relative;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.main-nav a:hover {
+  color: var(--primary-light);
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-light);
+  transition: var(--transition);
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* Выпадающее меню */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bg-darker);
+  border: 1px solid var(--gold); /* Золотая рамка как в dragon-form */
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  box-shadow: var(--shadow);
+  min-width: 200px;
+  z-index: 1001;
+  display: none;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu a {
+  padding: 8px 15px;
+  font-size: 14px;
+  text-transform: none; /* Убираем верхний регистр */
+  color: var(--gold); /* Золотой текст как в dragon-form */
+  font-family: 'Allods West', Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(50, 40, 30, 0.7);
+  color: var(--gold-light); /* Яркое золото при наведении */
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.arrow {
+  font-size: 10px;
+  transition: transform 0.3s;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* Основное содержимое */
+.main-content {
+  flex: 1;
+  padding-top: 10px;
+}
+
+.class-central-block {
+  max-width: 1200px;
+  margin: 30px auto;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Табы */
+.class-tabs {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab-nav {
+  display: flex;
+  list-style: none;
+}
+
+.tab-nav li {
+  margin-right: 1px;
+}
+
+.tab-nav a {
+  display: block;
+  padding: 16px 25px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 16px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.tab-nav .active a {
+  color: var(--primary-light);
+  background: rgba(50, 40, 30, 0.7);
+}
+
+.tab-nav .active a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-light);
+}
+
+/* Контент */
+.content-wrapper {
+  display: flex;
+  padding: 25px;
+}
+
+.left-column {
+  flex: 2;
+  padding-right: 25px;
+  border-right: 1px solid var(--border-color);
+}
+
+.right-column {
+  flex: 1;
+  padding-left: 25px;
+}
+
+/* Заголовки */
+h2, h3, h4 {
+  color: var(--primary-light);
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: var(--primary);
+}
+
+h3 {
+  font-size: 22px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+  
+  .header {
+    padding: 8px 15px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .main-nav {
+    gap: 12px;
+    padding-right: 20px;
+  }
+  
+  .main-nav a {
+    font-size: 14px;
+  }
+  
+  .dropdown-menu {
+    position: fixed;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav a {
+    font-size: 12px;
+  }
+}
