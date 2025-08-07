@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АО | Наследие Вечных</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/tooltips.css">
+    <link rel="stylesheet" href="assets/css/core.css">
+    <link rel="stylesheet" href="assets/css/radio.css">
+    <link rel="stylesheet" href="assets/css/volume.css">
+    <link rel="stylesheet" href="assets/css/running-line.css">
+    
+    <!-- Meta -->
+    <meta name="description" content="Фан-сайт гильдии Наследие Вечные в Allods Online">
+</head>
+
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo/logo.webp"></a>
+        </div>
+        <nav class="menu">
+            <!-- Блок громкости -->
+            <div class="volume-container">
+                <div class="volume-icon">
+                    <div class="volume-icon-fill"></div>
+                    <img src="assets/images/icons/other/sound.png" alt="Громкость" class="volume-icon-img sound-icon" width="20" height="20">
+                    <img src="assets/images/icons/other/no-sound.png" alt="Без звука" class="volume-icon-img mute-icon" style="display: none;" width="20" height="20">
+                </div>
+                <div class="volume-slider-container">
+                    <input type="range" min="0" max="1" step="0.01" class="volume-slider" value="0.5">
+                </div>
+            </div>
+
+            <!-- Радио-плеер -->
+            <div class="radio-container">
+                <button id="radio-toggle" class="radio-button" aria-label="Включить радио"></button>
+                <div class="radio-ticker-container">
+                    <div class="radio-ticker">Нажмите для воспроизведения</div>
+                </div>
+            </div>
+
+            <!-- Меню -->
+            <a href="index.html">Главная</a>
+            <a href="news.html">Новости</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Предметы <span class="arrow">▼</span></a>
+                <div class="dropdown-menu">
+                    <a href="dragon-form.html">Драконий Облик</a>
+                    <a href="bank-items.html">Предметы в банке</a>
+                </div>
+            </div>
+            <a href="guild.html">Гильдия</a>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main">
+        <h1>Выбери свой класс</h1>
+        <div class="classes-grid">
+            <!-- Первый ряд (4 карточки) -->
+            <div class="row-4">
+                <a href="warrior.html" class="class-card">
+                    <img src="assets/images/races/warrior.webp" alt="Воин" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Воин</h2>
+                        <p>Мощный воин с яростью в сердце.</p>
+                    </div>
+                </a>
+                <a href="paladin.html" class="class-card">
+                    <img src="assets/images/races/paladin.webp" alt="Храмовник" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Храмовник</h2>
+                        <p>Смертоносный страж света.</p>
+                    </div>
+                </a>
+                <a href="rogue.html" class="class-card">
+                    <img src="assets/images/races/rogue.webp" alt="Разведчик" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Разведчик</h2>
+                        <p>Мастер скрытных атак.</p>
+                    </div>
+                </a>
+                <a href="priest.html" class="class-card">
+                    <img src="assets/images/races/priest2.webp" alt="Жрец" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Жрец</h2>
+                        <p>Служитель церкви света.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Второй ряд (4 карточки) -->
+            <div class="row-4">
+                <a href="druid.html" class="class-card">
+                    <img src="assets/images/races/druid.webp" alt="Друид" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Друид</h2>
+                        <p>Шаман мистической практики.</p>
+                    </div>
+                </a>
+                <a href="wizard.html" class="class-card">
+                    <img src="assets/images/races/wizard.webp" alt="Волшебник" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Волшебник</h2>
+                        <p>Магистр стихийного урона.</p>
+                    </div>
+                </a>
+                <a href="necromancer.html" class="class-card">
+                    <img src="assets/images/races/necromancer.webp" alt="Некромант" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Некромант</h2>
+                        <p>Чернокнижник ордена смерти.</p>
+                    </div>
+                </a>
+                <a href="psionic.html" class="class-card">
+                    <img src="assets/images/races/psionic.webp" alt="Мистик" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Мистик</h2>
+                        <p>Повелитель тайных знаний.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Третий ряд (2 карточки) -->
+            <div class="row-2">
+                <a href="bard.html" class="class-card">
+                    <img src="assets/images/races/bard.webp" alt="Бард" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Бард</h2>
+                        <p>Суровый мужчина с гитарой.</p>
+                    </div>
+                </a>
+                <a href="engineer.html" class="class-card">
+                    <img src="assets/images/races/engineer.webp" alt="Инженер" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Инженер</h2>
+                        <p>Научно-технический работник.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Четвёртый ряд (1 карточка) -->
+            <div class="row-1">
+                <a href="demonologist.html" class="class-card">
+                    <img src="assets/images/races/demonologist.webp" alt="Демонолог" width="200" height="200">
+                    <div class="text-content">
+                        <h2>Демонолог</h2>
+                        <p>Беспощадный и ведомый местью.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p>© 2025 Allods Online Fan Site | Гильдия "Наследие Вечных" | Сервер "Наследие Богов"</p>
+        <div class="credits">
+            <p>Особая благодарность:</p>
+            <ul>
+                <li>ВЕРКИРИЙ</li>
+                <li>Войслава</li>
+                <li>ДияМира</li>
+                <li>ЛозиФол</li>
+                <li>Фелхаммер</li>
+            </ul>
+        </div>
+        <p>Сайт создан: СкиллОхотникА</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/head/radio.js" defer></script>
+    <script src="assets/head/running-line.js" defer></script>
+</body>
+</html>
