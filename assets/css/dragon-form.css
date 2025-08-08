@@ -1,0 +1,260 @@
+/* dragon-form.css - Исправленная версия */
+:root {
+  --gold: #b8860b;
+  --gold-light: #ffd700;
+  --text-color: #e0d3b8;
+  --card-width: 420px;
+  --gap: 15px;
+  --dragon-name-color: #b8860b;
+  --item-level-color: #ff8800ab;
+}
+
+.main {
+  padding-top: 10px;
+}
+
+/* Основная сетка */
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+  gap: var(--gap);
+  justify-items: center;
+  padding: 10px;
+  max-width: 1800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Карточки */
+.build-card {
+  width: var(--card-width);
+  min-width: var(--card-width);
+  margin-bottom: var(--gap);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.build-card:hover {
+  transform: scale(1.02);
+}
+
+/* Заголовок карточки */
+.card-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../images/frame/button-inactive-nonaim.webp') no-repeat center/100% 100%;
+  color: var(--dragon-name-color);
+  font-family: 'AllodsWest', "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 15px;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.build-card:hover .card-header {
+  background-image: url('../images/frame/button-active-aim.webp');
+  color: #ffffff;
+  animation: breath 2s infinite alternate;
+}
+
+.card-header::after {
+  content: '⤵︎';
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.build-card:hover .card-header::after {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Контент карточки */
+.card-content {
+  color: var(--text-color);
+  max-height: 0;
+  letter-spacing: 0.3px;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: url('../images/frame/paperdoll.webp') no-repeat center/100% 100%;
+  background-size: 100% 100%;
+  margin-top: 5px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.build-card.expanded .card-content {
+  max-height: 800px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.card-content h3 {
+  font-weight: 800; /* Жирный текст (эквивалент bold) */
+  color: var(--item-level-color);
+  margin: 40px 10px 10px;
+  font-size: 17px;
+  text-align: center;
+  position: relative;
+  top: -10px;
+}
+
+.card-content ul {
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.card-content li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 10px; /* Добавляет отступ снизу каждой строки */
+}
+
+/* Исправление для пунктов меню */
+.dropdown-menu a {
+  display: block !important;
+  padding: 8px 15px !important;
+  color: var(--gold) !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+  text-align: left !important;
+  font-family: 'AllodsWest', "Arial", sans-serif !important;
+}
+
+.dropdown-menu a:hover {
+  color: var(--gold-light) !important;
+  background: rgba(50, 40, 30, 0.7) !important;
+}
+
+.items-count {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: bold;
+  margin-right: 5px;
+  text-align: left;
+  width: auto;
+  min-width: auto;
+  padding-left: 15px;
+  margin-left: -5px;
+}
+
+/* Стиль для разделительной линии */
+.card-content p {
+  padding: 0 15px;
+  letter-spacing: -0.1px;
+  line-height: 1.3;
+  margin: 15px 0;
+  position: relative;
+  padding-top: 15px;
+  text-align: left;
+}
+
+.card-level h3 {
+    border-bottom: none; /* Убираем линию у уровня */
+}
+
+.card-content p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 1800px;
+    width: 100%;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    background: url('../images/frame/button-inactive-nonaim.webp') no-repeat center/100% 100%;
+    border: none;
+    color: var(--dragon-name-color);
+    font-family: 'AllodsWest', "Arial", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.filter-btn:hover {
+    background-image: url('../images/frame/button-active-aim.webp');
+    color: #ffffffda;
+}
+
+.filter-btn.active {
+    background-image: url('../images/frame/button-active-aim.webp');
+    color: var(--gold-light);
+    font-weight: bold;
+}
+
+/* Адаптация под экраны */
+@media (max-width: 1800px) {
+  .classes-grid { grid-template-columns: repeat(5, var(--card-width)); }
+}
+
+@media (max-width: 1500px) {
+  .classes-grid { grid-template-columns: repeat(4, var(--card-width)); }
+}
+
+@media (max-width: 1200px) {
+  .classes-grid { grid-template-columns: repeat(3, var(--card-width)); }
+}
+
+@media (max-width: 900px) {
+  .classes-grid { grid-template-columns: repeat(2, var(--card-width)); }
+  
+  .filters {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 10px;
+  }
+  
+  .filter-btn {
+      flex-shrink: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .classes-grid {
+    grid-template-columns: 1fr;
+    --card-width: calc(100% - 20px);
+    padding: 10px;
+  }
+  
+  .card-header {
+    height: 50px;
+    font-size: 15px;
+  }
+}
+
+/* Анимация дыхания */
+@keyframes breath {
+  0% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
